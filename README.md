@@ -29,6 +29,8 @@ The backend is built using Node.js and Express, with MongoDB as the database. It
 - **cd ../backend**
 - **npm install**
 - **npx ts-node index.ts**
+
+
 Ensure MongoDB is running and properly configured. The backend will start on http://localhost:5000.
 
 
