@@ -20,9 +20,9 @@ The backend is built using Node.js and Express, with MongoDB as the database. It
 
   
 ### Frontend 
-cd frontend
-npm install
-npm start
+- **cd frontend**
+- **npm install**
+- **npm start**
 
 
 ### Backend
