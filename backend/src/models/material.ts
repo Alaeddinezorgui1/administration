@@ -1,17 +1,18 @@
-import mongoose, { Document, Schema } from 'mongoose';
+import mongoose, { Document, Schema } from "mongoose";
 
 // Define an interface for the PC Material model
 interface IPCMaterial extends Document {
-  name: string;          // Name of the material (e.g., "NVIDIA GeForce RTX 3080")
-  type: string;          // Type of material (e.g., "GPU", "CPU", "RAM", etc.)
-  brand: string;         // Brand of the material (e.g., "NVIDIA", "AMD", "Intel")
+  name: string;
+  type: string;
+  brand: string;
+  image: string;
   specs: {
-    memory: string;      // Memory specifications (e.g., "10GB GDDR6X")
-    speed?: string;      // Optional: Speed specifications (e.g., "1.7 GHz")
-    cores?: number;      // Optional: Number of cores (for CPUs)
+    memory: string;
+    speed?: string;
+    cores?: number;
   };
-  price: number;         // Price of the material
-  inStock: boolean;      // Availability status
+  price: number;
+  inStock: boolean;
 }
 
 // Create a schema for the PC Material model
@@ -19,6 +20,7 @@ const PCMaterialSchema: Schema = new Schema({
   name: { type: String, required: true },
   type: { type: String, required: true },
   brand: { type: String, required: true },
+  image: { type: String, required: false },
   specs: {
     memory: { type: String, required: true },
     speed: { type: String },
@@ -29,6 +31,6 @@ const PCMaterialSchema: Schema = new Schema({
 });
 
 // Create the model
-const PCMaterial = mongoose.model<IPCMaterial>('PCMaterial', PCMaterialSchema);
+const PCMaterial = mongoose.model<IPCMaterial>("PCMaterial", PCMaterialSchema);
 
 export default PCMaterial;
