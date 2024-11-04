@@ -5,6 +5,7 @@
 This project is designed to manage the administration of a company's human resources and track permissions and equipment assignments. The system is divided into two main parts: the frontend and the backend.
 
 ## Project Structure
+
 ### Frontend
 
 The frontend is built using React and TypeScript. It provides an interface for users to manage their permissions and track the equipment assigned to them.
@@ -18,22 +19,19 @@ The backend is built using Node.js and Express, with MongoDB as the database. It
 - **User Management**: Track and manage employee information.
 - **Permissions Tracking**: Monitor and update permissions for each user.
 
-  
-### Frontend 
+### Frontend
+
 - **cd frontend**
 - **npm install**
 - **npm start**
 
-
 ### Backend
+
 - **cd ../backend**
 - **npm install**
-- **npx ts-node index.ts**
-
+- **npx ts-node app.ts**
 
 Ensure MongoDB is running and properly configured. The backend will start on http://localhost:5000.
-
-
 
 Configuration
 Frontend Configuration
